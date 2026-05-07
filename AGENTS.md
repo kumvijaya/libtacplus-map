@@ -29,17 +29,13 @@ No bundled tests; verified end-to-end via `libnss-tacplus` + `libpam-tacplus` on
 
 ## Cross-repo context
 
-Sits between `libpam-tacplus` (which authenticates the user and creates the mapping) and `libnss-tacplus` (which reads the mapping for NSS lookups). Built via `VyOS-Networks/vyos-build-packages`; consumed by `vyos/vyos-build`. Sibling auth packages: `libnss-mapuser`, `libpam-radius-auth`.
+Sits between `libpam-tacplus` (which authenticates the user and creates the mapping) and `libnss-tacplus` (which reads the mapping for NSS lookups). Built via the internal build-packages workflow; consumed by `vyos/vyos-build`. Sibling auth packages: `libnss-mapuser`, `libpam-radius-auth`.
 
 ## Conventions
 
 - Default branch `master`.
 - Commit / PR title format: `component: T12345: description` (Phorge task ID at https://vyos.dev).
 - Keep API stable — `libnss-tacplus` and `libpam-tacplus` link against this and are version-coupled.
-
-## Mirror relationship
-
-Mirror twin: `VyOS-Networks/libtacplus-map`. Canonical side is here.
 
 ## Notes for future contributors
 
